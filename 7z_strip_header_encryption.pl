@@ -3071,6 +3071,8 @@ for (my $i = 0; $i < scalar (@ARGV); $i++)
     $header_encryption_pass = $ARGV[$i];
 
     $header_encryption_pass =~ s/^-p//;
+
+    $header_encryption_pass_pos = $i;
   }
   elsif (($ARGV[$i] eq "--password") or
          ($ARGV[$i] eq "-p"))
@@ -3079,9 +3081,10 @@ for (my $i = 0; $i < scalar (@ARGV); $i++)
     {
       $i++;
 
-      $header_encryption_pass     = $ARGV[$i];
-      $header_encryption_pass_pos = $i;
+      $header_encryption_pass = $ARGV[$i];
     }
+
+    $header_encryption_pass_pos = $i;
   }
   elsif ($ARGV[$i] =~ m/^-o.+$/)
   {
@@ -3111,7 +3114,7 @@ for (my $i = 0; $i < scalar (@ARGV); $i++)
   }
 }
 
-if (! defined ($header_encryption_pass))
+if (! defined ($header_encryption_pass_pos))
 {
   print STDERR "ERROR: the password is missing in your command\n\n";
 
