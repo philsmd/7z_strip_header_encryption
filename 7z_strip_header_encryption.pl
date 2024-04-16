@@ -3175,6 +3175,8 @@ foreach my $file_name (@file_list)
     next;
   }
 
+  # reset the offset for the in-memory buffer before every new file:
+
   $memory_buffer_read_offset = 0;
 
   my $ret = seven_zip_strip_header_encryption ($file_name, $header_encryption_pass, $output_file_name);
