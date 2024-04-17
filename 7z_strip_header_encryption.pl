@@ -3125,7 +3125,10 @@ if (! defined ($header_encryption_pass_pos))
 
 if (scalar (@file_parameters) lt 1)
 {
-  if (defined ($header_encryption_pass_pos))
+  # special case: assume that the "password" was actually just the file name argument:
+
+  if (defined ($header_encryption_pass) and
+      defined ($header_encryption_pass_pos))
   {
     push (@file_parameters, $header_encryption_pass);
 
