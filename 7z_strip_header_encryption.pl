@@ -2929,7 +2929,7 @@ sub strip_header_encryption_pass
 
   my $encrypted_data = my_read ($fp, $position_pack); # NOTE: we shouldn't read a very huge data buffer directly into memory
 
-  # to see the decrypted data (with the exact same password use this), use this:
+  # to see the decrypted data (with the exact same password), use this:
   # my $second_layer_pass = $header_pass; # to test different pass, use string like "password"
   # my $key2 = aes_derive_key   ($second_layer_pass, $number_cycles_power);
   # my $aes2 = aes_init_context ($key2, $iv_buf, $iv_len);
@@ -3160,7 +3160,7 @@ if (! defined ($header_encryption_pass))
 # also on a random IV) later on
 # that strategy would give us a huge advantage especially if we have multiple files with
 # the exact same password
-# see "Key derivation from password (=> AES key) strip_header_encryption_pass ()
+# see "Key derivation from password (=> AES key)" in strip_header_encryption_pass ()
 
 
 my @file_list = globbing_on_windows (@file_parameters);
