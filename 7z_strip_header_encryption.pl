@@ -15,6 +15,9 @@ use Encode;
 # version:
 # 0.01
 
+# license:
+# public domain, credits go to philsmd and hashcat for their hard work
+
 # dependencies:
 # Compress::Raw::Lzma
 # Crypt::CBC
