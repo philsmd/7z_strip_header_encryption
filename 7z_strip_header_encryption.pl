@@ -17,6 +17,11 @@ use Encode;
 
 # dependencies:
 # Compress::Raw::Lzma
+# Crypt::CBC
+# Digest::CRC
+# Digest::SHA
+# Encode
+# File::Glob
 
 #
 # Constants
