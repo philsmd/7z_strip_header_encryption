@@ -152,10 +152,10 @@ sub usage
 
   print "Options Short, Long | Type | Description                                  | Example\n";
   print "====================+======+==============================================+=========\n";
-  print "-p, --password      |      | Header encryption password (required)        |\n";
+  print "-p, --password      | Str  | Header encryption password (required)        | -p 12345\n";
+  print "-o, --output        | Str  | File to write to (output 7-Zip archive file) | -o ab.7z\n";
   print "-v, --version       |      | Print version                                |\n";
   print "-h, --help          |      | Print help                                   |\n";
-  print "-o, --output        | Str  | File to write to (output 7-Zip archive file) | -o ab.7z\n";
   print "\n";
 }
 
